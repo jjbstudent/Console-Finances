@@ -88,3 +88,10 @@
   ['Feb-2017', 671099],
 ];
 
+// Total month 
+var totalMonths = finances.length;
+
+alert(finances.length) // calculated by the total stored in array
+alert(totalMonths) // new var for total months 
+
+     
