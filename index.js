@@ -90,8 +90,19 @@
 
 // Total month 
 var totalMonths = finances.length;
+// Initialize a variable to store the total profit and loss
+var totalProfitLoss = 0;
 
+// Loop through each element in the finances array
+for (var i = 0; i < finances.length; i++) {
+  // Access the second element (index 1) of each sub-array, which represents the profit/loss
+  var monthlyProfitLoss = finances[i][1];
+
+  // Add the monthly profit/loss to the total
+  totalProfitLoss += monthlyProfitLoss;
+}
 alert(finances.length) // calculated by the total stored in array
 alert(totalMonths) // new var for total months 
+alert(totalProfitLoss) // display total profit loss
 
      
