@@ -121,16 +121,25 @@ for (var i = 0; i < finances.length; i++) {
 // Calculate the average change
 var averageChange = totalChange / (totalMonths - 1);
 
-// Display the results using alerts
-alert("Total months: " + totalMonths);
-alert("Total Profit/Loss: " + totalProfitLoss);
-alert("Average change: " + averageChange);
-alert("Greatest Increase: " + greatestIncrease.date + " (" + greatestIncrease.amount + ")");
-alert("Greatest Decrease: " + greatestDecrease.date + " (" + greatestDecrease.amount + ")");
+// Display results in one Alert box
+alert(
+  "Financial Analysis\n\n" +
+  "Total months: " + totalMonths +
+  "\nTotal Profit/Loss: $" + totalProfitLoss +
+  "\nAverage change: $" + averageChange +
+  "\nGreatest Increase: " + greatestIncrease.date + " ($" + greatestIncrease.amount + ")" +
+  "\nGreatest Decrease: " + greatestDecrease.date + " ($" + greatestDecrease.amount + ")"
+);
+//created a string for output
+var output = (
+  "Financial Analysis\n" +
+  "------------------\n" +
+  "Total Months: " + totalMonths + "\n" +
+  "Total: $" + totalProfitLoss + "\n" +
+  "Average Change: $" + averageChange.toFixed(2) + "\n" +
+  "Greatest Increase in Profits/Losses: " + greatestIncrease.date + " ($" + greatestIncrease.amount + ")\n" +
+  "Greatest Decrease in Profits/Losses: " + greatestDecrease.date + " ($" + greatestDecrease.amount + ")"
+);
 
-// Display the results in the console log
-console.log("Total months:", totalMonths);
-console.log("Total Profit/Loss: $" + totalProfitLoss);
-console.log("Average change: $" + averageChange);
-console.log("Greatest Increase: " + greatestIncrease.date + " ($" + greatestIncrease.amount + ")");
-console.log("Greatest Decrease: " + greatestDecrease.date + " ($" + greatestDecrease.amount + ")");
+// Display the output in the console log
+console.log(output);
