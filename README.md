@@ -25,6 +25,14 @@ Use the link provided to access the project
 
 https://jjbstudent.github.io/Console-Finances/
 
+## Contributions 
+
+Resources used for the project
+
+1. XpertLearning Assistant - for some of the calulations
+2. https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math
+3. https://www.w3schools.com/js/js_arithmetic.asp
+
 ## Licence 
 
 MIT licence
