@@ -11,6 +11,10 @@ This project performs a financial analysis based on a dataset containing monthly
 - **Average Change:** Calculates the average change in profit/losses from month to month.
 - **Greatest Increase/Decrease:** Identifies the months with the greatest increase and decrease in profits/losses, along with the corresponding amounts.
 
+- ScreenShots
+
+![Financial Analysis Image](references/screen1.jpg)
+
 ## Usage
 
 1. **Dataset:** Ensure your financial data is structured in the same format as the provided sample.
