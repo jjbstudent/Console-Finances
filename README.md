@@ -21,6 +21,10 @@ This project performs a financial analysis based on a dataset containing monthly
 
 Ensure you have a JavaScript environment. You can run the script in a web browser console or a Node.js environment.
 
+Use the link provided to access the project 
+
+https://jjbstudent.github.io/Console-Finances/
+
 ## Licence 
 
 MIT licence
