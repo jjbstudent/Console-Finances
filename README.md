@@ -14,6 +14,7 @@ This project performs a financial analysis based on a dataset containing monthly
 - ScreenShots
 
 ![Financial Analysis Image](reference/screen1.jpg)
+![Financial Analysis Image](reference/screen2.jpg)
 
 ## Usage
 
