@@ -1,5 +1,4 @@
- 
- var finances = [
+var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
   ['Mar-2010', 322013],
@@ -88,21 +87,50 @@
   ['Feb-2017', 671099],
 ];
 
-// Total month 
+// Initialize variables
 var totalMonths = finances.length;
-// Initialize a variable to store the total profit and loss
 var totalProfitLoss = 0;
+var totalChange = 0;
+var greatestIncrease = { date: '', amount: 0 };
+var greatestDecrease = { date: '', amount: 0 };
 
-// Loop through each element in the finances array
+// Loop through the data to calculate the required values
 for (var i = 0; i < finances.length; i++) {
-  // Access the second element (index 1) of each sub-array, which represents the profit/loss
-  var monthlyProfitLoss = finances[i][1];
+  // Calculate total profit/loss
+  totalProfitLoss += finances[i][1];
 
-  // Add the monthly profit/loss to the total
-  totalProfitLoss += monthlyProfitLoss;
+  // Calculate change in profit/loss (except for the first month)
+  if (i > 0) {
+    var change = finances[i][1] - finances[i - 1][1];
+    totalChange += change;
+
+    // Check for the greatest increase
+    if (change > greatestIncrease.amount) {
+      greatestIncrease.amount = change;
+      greatestIncrease.date = finances[i][0];
+    }
+
+    // Check for the greatest decrease
+    if (change < greatestDecrease.amount) {
+      greatestDecrease.amount = change;
+      greatestDecrease.date = finances[i][0];
+    }
+  }
 }
-alert(finances.length) // calculated by the total stored in array
-alert(totalMonths) // new var for total months 
-alert(totalProfitLoss) // display total profit loss
 
-     
+// Calculate the average change
+var averageChange = totalChange / (totalMonths - 1);
+
+// Display the results using alerts
+alert("Total months: " + totalMonths);
+alert("Total Profit/Loss: " + totalProfitLoss);
+alert("Average change: " + averageChange);
+alert("Greatest Increase: " + greatestIncrease.date + " (" + greatestIncrease.amount + ")");
+alert("Greatest Decrease: " + greatestDecrease.date + " (" + greatestDecrease.amount + ")");
+
+// Display the results in the console log
+console.log("Total months:", totalMonths);
+console.log("Total Profit/Loss: $" + totalProfitLoss);
+console.log("Average change: $" + averageChange);
+console.log("Greatest Increase: " + greatestIncrease.date + " ($" + greatestIncrease.amount + ")");
+console.log("Greatest Decrease: " + greatestDecrease.date + " ($" + greatestDecrease.amount + ")");
